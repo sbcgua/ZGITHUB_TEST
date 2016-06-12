@@ -4,7 +4,9 @@
   <DATA>
    <MASTER_LANGUAGE>E</MASTER_LANGUAGE>
    <STARTING_FOLDER>/</STARTING_FOLDER>
-   <IGNORE/>
+   <IGNORE>
+    <item>/README.md</item>
+   </IGNORE>
   </DATA>
  </asx:values>
 </asx:abap>
