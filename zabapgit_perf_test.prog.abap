@@ -116,16 +116,16 @@ form test_get_files
   write: /(50) 'Test get_files*' color = 4.
 
   get time stamp field lv_sta_time.
-  po_repo->get_files_local( ).
-  get time stamp field lv_end_time.
-  lv_diff  = lv_end_time - lv_sta_time.
-  write: /(30) 'get_files_local()', lv_diff.
-
-  get time stamp field lv_sta_time.
   po_repo->get_files_remote( ).
   get time stamp field lv_end_time.
   lv_diff  = lv_end_time - lv_sta_time.
   write: /(30) 'get_files_remote()', lv_diff.
+
+  get time stamp field lv_sta_time.
+  po_repo->get_files_local( ).
+  get time stamp field lv_end_time.
+  lv_diff  = lv_end_time - lv_sta_time.
+  write: /(30) 'get_files_local()', lv_diff.
 
   get time stamp field lv_sta_time.
   pt_stat = po_repo->status( ).
