@@ -77,57 +77,21 @@ AT SELECTION-SCREEN.
 
 **********************************************************************
 
-form do_perf_test using p_repokey raising lcx_exception.
+form write_repo_stats
+  using pt_stat type ty_results_tt
+  raising lcx_exception.
 
-  data: lo_repo type ref to lcl_repo_online,
-        lv_user type string,
-        lv_pass type string,
-        lt_stat type ty_results_tt.
-  data: lv_sta_time type timestampl,
-        lv_end_time type timestampl,
-        lv_diff     type p decimals 6.
-
-
-  get time stamp field lv_sta_time.
-  lo_repo ?= lcl_app=>repo_srv( )->get( p_repokey ).
-  get time stamp field lv_end_time.
-  lv_diff  = lv_end_time - lv_sta_time.
-  write: /(30) 'repo_srv()->get()', lv_diff.
-
-  lo_repo->get_branches( ). " Check connection and cache password from user if needed
-
-  get time stamp field lv_sta_time.
-  lo_repo->get_files_local( ).
-  get time stamp field lv_end_time.
-  lv_diff  = lv_end_time - lv_sta_time.
-  write: /(30) 'get_files_local()', lv_diff.
-
-  get time stamp field lv_sta_time.
-  lo_repo->get_files_remote( ).
-  get time stamp field lv_end_time.
-  lv_diff  = lv_end_time - lv_sta_time.
-  write: /(30) 'get_files_remote()', lv_diff.
-
-  get time stamp field lv_sta_time.
-  lt_stat = lo_repo->status( ).
-  get time stamp field lv_end_time.
-  lv_diff  = lv_end_time - lv_sta_time.
-  write: /(30) 'status()', lv_diff.
-
-
-**********************************************************************
   data lv_cnt type i.
 
-  write: /.
   write: /(50) 'Repo stats' color = 4.
 
-  lv_cnt = lines( lt_stat ).
+  lv_cnt = lines( pt_stat ).
   write: /(30) 'Files:', lv_cnt.
 
-  sort lt_stat by obj_type obj_name.
-  field-symbols <stat> like line of lt_stat.
+  sort pt_stat by obj_type obj_name.
+  field-symbols <stat> like line of pt_stat.
   clear lv_cnt.
-  loop at lt_stat assigning <stat>.
+  loop at pt_stat assigning <stat>.
     at new obj_name.
       if <stat>-obj_type is not initial.
         lv_cnt = lv_cnt + 1.
@@ -135,6 +99,54 @@ form do_perf_test using p_repokey raising lcx_exception.
     endat.
   endloop.
   write: /(30) 'Objects:', lv_cnt.
+
+  write: /.
+
+endform.
+
+form test_get_files
+  using po_repo type ref to lcl_repo_online
+        pt_stat type ty_results_tt
+  raising lcx_exception.
+
+  data: lv_sta_time type timestampl,
+        lv_end_time type timestampl,
+        lv_diff     type p decimals 6.
+
+  write: /(50) 'Test get_files*' color = 4.
+
+  get time stamp field lv_sta_time.
+  po_repo->get_files_local( ).
+  get time stamp field lv_end_time.
+  lv_diff  = lv_end_time - lv_sta_time.
+  write: /(30) 'get_files_local()', lv_diff.
+
+  get time stamp field lv_sta_time.
+  po_repo->get_files_remote( ).
+  get time stamp field lv_end_time.
+  lv_diff  = lv_end_time - lv_sta_time.
+  write: /(30) 'get_files_remote()', lv_diff.
+
+  get time stamp field lv_sta_time.
+  pt_stat = po_repo->status( ).
+  get time stamp field lv_end_time.
+  lv_diff  = lv_end_time - lv_sta_time.
+  write: /(30) 'status()', lv_diff.
+
+  write: /.
+
+endform.
+
+form do_perf_test using p_repokey raising lcx_exception.
+
+  data: lo_repo type ref to lcl_repo_online,
+        lt_stat type ty_results_tt.
+
+  lo_repo ?= lcl_app=>repo_srv( )->get( p_repokey ).
+  lo_repo->get_branches( ). " Check connection and cache password from user if needed
+
+  perform test_get_files using lo_repo lt_stat.
+  perform write_repo_stats using lt_stat.
 
 endform.
 
