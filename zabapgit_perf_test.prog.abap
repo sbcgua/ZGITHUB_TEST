@@ -55,6 +55,10 @@ INCLUDE zabapgit_app_impl.
 INCLUDE zabapgit_unit_test.
 INCLUDE zabapgit_forms.
 
+selection-screen begin of block 1.
+  parameters p_key type lcl_persistence_db=>ty_value.
+selection-screen end of block 1.
+
 INITIALIZATION.
   lcl_password_dialog=>on_screen_init( ).
 
@@ -73,19 +77,19 @@ AT SELECTION-SCREEN.
 
 **********************************************************************
 
-start-of-selection.
+form do_perf_test using p_repokey raising lcx_exception.
 
-*  constants gc_target_repo_key type lcl_persistence_db=>ty_value value '000000000004'.
-  constants gc_target_repo_key type lcl_persistence_db=>ty_value value '000000000011'.
   data: lo_repo type ref to lcl_repo_online,
         lv_user type string,
-        lv_pass type string.
+        lv_pass type string,
+        lt_stat type ty_results_tt.
   data: lv_sta_time type timestampl,
         lv_end_time type timestampl,
         lv_diff     type p decimals 6.
 
+
   get time stamp field lv_sta_time.
-  lo_repo ?= lcl_app=>repo_srv( )->get( gc_target_repo_key ).
+  lo_repo ?= lcl_app=>repo_srv( )->get( p_repokey ).
   get time stamp field lv_end_time.
   lv_diff  = lv_end_time - lv_sta_time.
   write: /(30) 'repo_srv()->get()', lv_diff.
@@ -93,8 +97,8 @@ start-of-selection.
   lv_user = lcl_app=>user( )->get_repo_username( lo_repo->get_url( ) ).
 
   lcl_password_dialog=>popup(
-    EXPORTING iv_repo_url = lo_repo->get_url( )
-    CHANGING  cv_user     = lv_user
+    exporting iv_repo_url = lo_repo->get_url( )
+    changing  cv_user     = lv_user
               cv_pass     = lv_pass ).
 
   lcl_login_manager=>set(
@@ -116,7 +120,46 @@ start-of-selection.
   write: /(30) 'get_files_remote()', lv_diff.
 
   get time stamp field lv_sta_time.
-  lo_repo->status( ).
+  lt_stat = lo_repo->status( ).
   get time stamp field lv_end_time.
   lv_diff  = lv_end_time - lv_sta_time.
   write: /(30) 'status()', lv_diff.
+
+
+**********************************************************************
+  data lv_cnt type i.
+
+  write: /.
+  write: /(50) 'Repo stats' color = 4.
+
+  lv_cnt = lines( lt_stat ).
+  write: /(30) 'Files:', lv_cnt.
+
+  sort lt_stat by obj_type obj_name.
+  field-symbols <stat> like line of lt_stat.
+  clear lv_cnt.
+  loop at lt_stat assigning <stat>.
+    at new obj_name.
+      if <stat>-obj_type is not initial.
+        lv_cnt = lv_cnt + 1.
+      endif.
+    endat.
+  endloop.
+  write: /(30) 'Objects:', lv_cnt.
+
+endform.
+
+
+start-of-selection.
+
+  data lx type ref to lcx_exception.
+
+  call function 'CONVERSION_EXIT_ALPHA_INPUT'
+    exporting input  = p_key
+    importing output = p_key.
+
+  try.
+    perform do_perf_test using p_key.
+  catch lcx_exception into lx.
+    write: / 'Error:', lx->mv_text.
+  endtry.
