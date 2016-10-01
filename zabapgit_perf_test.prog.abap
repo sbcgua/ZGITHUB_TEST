@@ -94,18 +94,7 @@ form do_perf_test using p_repokey raising lcx_exception.
   lv_diff  = lv_end_time - lv_sta_time.
   write: /(30) 'repo_srv()->get()', lv_diff.
 
-  lv_user = lcl_app=>user( )->get_repo_username( lo_repo->get_url( ) ).
-
-  lcl_password_dialog=>popup(
-    exporting iv_repo_url = lo_repo->get_url( )
-    changing  cv_user     = lv_user
-              cv_pass     = lv_pass ).
-
-  lcl_login_manager=>set(
-    iv_uri      = lo_repo->get_url( )
-    iv_username = lv_user
-    iv_password = lv_pass
-  ).
+  lo_repo->get_branches( ). " Check connection and cache password from user if needed
 
   get time stamp field lv_sta_time.
   lo_repo->get_files_local( ).
