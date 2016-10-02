@@ -56,7 +56,7 @@ INCLUDE zabapgit_unit_test.
 INCLUDE zabapgit_forms.
 
 selection-screen begin of block 1.
-  parameters p_key type lcl_persistence_db=>ty_value.
+  parameters p_key type lcl_persistence_db=>ty_value default 4.
 selection-screen end of block 1.
 
 INITIALIZATION.
@@ -81,24 +81,36 @@ form write_repo_stats
   using pt_stat type ty_results_tt
   raising lcx_exception.
 
-  data lv_cnt type i.
+  data lv_file_cnt type i.
+  data lv_obj_cnt  type i.
+  data lv_type_cnt type i.
 
   write: /(50) 'Repo stats' color = 4.
 
-  lv_cnt = lines( pt_stat ).
-  write: /(30) 'Files:', lv_cnt.
-
   sort pt_stat by obj_type obj_name.
   field-symbols <stat> like line of pt_stat.
-  clear lv_cnt.
+
   loop at pt_stat assigning <stat>.
+    at new obj_type.
+      clear lv_type_cnt.
+    endat.
     at new obj_name.
       if <stat>-obj_type is not initial.
-        lv_cnt = lv_cnt + 1.
+        lv_obj_cnt = lv_obj_cnt + 1.
+      endif.
+      lv_type_cnt = lv_type_cnt + 1.
+    endat.
+    lv_file_cnt = lv_file_cnt + 1.
+    at end of obj_type.
+      if <stat>-obj_type is not initial.
+        write: /(30) <stat>-obj_type, lv_type_cnt.
       endif.
     endat.
   endloop.
-  write: /(30) 'Objects:', lv_cnt.
+
+  uline: /(5).
+  write: /(30) 'Objects:', lv_obj_cnt.
+  write: /(30) 'Files:',   lv_file_cnt.
 
   write: /.
 
@@ -115,23 +127,31 @@ form test_get_files
 
   write: /(50) 'Test get_files*' color = 4.
 
-  get time stamp field lv_sta_time.
-  po_repo->get_files_remote( ).
-  get time stamp field lv_end_time.
-  lv_diff  = lv_end_time - lv_sta_time.
-  write: /(30) 'get_files_remote()', lv_diff.
+*  get time stamp field lv_sta_time.
+*  po_repo->get_files_remote( ).
+*  get time stamp field lv_end_time.
+*  lv_diff  = lv_end_time - lv_sta_time.
+*  write: /(30) 'get_files_remote()', lv_diff  exponent 0.
 
   get time stamp field lv_sta_time.
   po_repo->get_files_local( ).
   get time stamp field lv_end_time.
   lv_diff  = lv_end_time - lv_sta_time.
-  write: /(30) 'get_files_local()', lv_diff.
+  write: /(30) 'get_files_local()', lv_diff  exponent 0.
+
+  po_repo->refresh_local( ).
+
+  get time stamp field lv_sta_time.
+  po_repo->get_files_local( ).
+  get time stamp field lv_end_time.
+  lv_diff  = lv_end_time - lv_sta_time.
+  write: /(30) 'get_files_local() cached', lv_diff  exponent 0.
 
   get time stamp field lv_sta_time.
   pt_stat = po_repo->status( ).
   get time stamp field lv_end_time.
   lv_diff  = lv_end_time - lv_sta_time.
-  write: /(30) 'status()', lv_diff.
+  write: /(30) 'status()', lv_diff exponent 0.
 
   write: /.
 
@@ -143,7 +163,7 @@ form do_perf_test using p_repokey raising lcx_exception.
         lt_stat type ty_results_tt.
 
   lo_repo ?= lcl_app=>repo_srv( )->get( p_repokey ).
-  lo_repo->get_branches( ). " Check connection and cache password from user if needed
+*  lo_repo->get_branches( ). " Check connection and cache password from user if needed
 
   perform test_get_files using lo_repo lt_stat.
   perform write_repo_stats using lt_stat.
