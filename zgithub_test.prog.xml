@@ -37,22 +37,136 @@
    <DYNPROS/>
    <CUA>
     <ADM>
-     <ACTCODE/>
-     <MENCODE/>
-     <PFKCODE/>
+     <ACTCODE>000001</ACTCODE>
+     <MENCODE>000006</MENCODE>
+     <PFKCODE>000001</PFKCODE>
      <DEFAULTACT/>
      <DEFAULTPFK/>
      <MOD_LANGU/>
     </ADM>
-    <STA/>
-    <FUN/>
+    <STA>
+     <RSMPE_STAT>
+      <CODE>ZGITHUB_TEST_GS</CODE>
+      <MODAL>D</MODAL>
+      <ACTCODE>000001</ACTCODE>
+      <PFKCODE>000001</PFKCODE>
+      <BUTCODE>0001</BUTCODE>
+      <INT_NOTE>Gui status</INT_NOTE>
+      <CTXCODE/>
+     </RSMPE_STAT>
+    </STA>
+    <FUN>
+     <RSMPE_FUNT>
+      <CODE>TB_OK1</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TYPE/>
+      <MODIF/>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME/>
+      <ICON_ID/>
+      <FUN_TEXT>OK1</FUN_TEXT>
+      <ICON_TEXT/>
+      <INFO_TEXT/>
+      <PATH/>
+      <SFW_SWITCHID/>
+      <SFW_SHOWHIDE/>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>TB_OK2</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TYPE/>
+      <MODIF/>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME/>
+      <ICON_ID/>
+      <FUN_TEXT>OK2</FUN_TEXT>
+      <ICON_TEXT/>
+      <INFO_TEXT/>
+      <PATH/>
+      <SFW_SWITCHID/>
+      <SFW_SHOWHIDE/>
+     </RSMPE_FUNT>
+    </FUN>
     <MEN/>
-    <MTX/>
+    <MTX>
+     <RSMPE_MNLT>
+      <CODE>000006</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME/>
+      <INC_PROG/>
+      <INC_STATUS/>
+      <SFW_SWITCHID/>
+      <SFW_SHOWHIDE/>
+      <TEXT>Additional</TEXT>
+      <PATH>A</PATH>
+      <INT_NOTE/>
+     </RSMPE_MNLT>
+    </MTX>
     <ACT/>
-    <BUT/>
-    <PFK/>
-    <SET/>
-    <DOC/>
+    <BUT>
+     <RSMPE_BUT>
+      <PFK_CODE>000001</PFK_CODE>
+      <CODE>0001</CODE>
+      <NO>01</NO>
+      <PFNO>02</PFNO>
+     </RSMPE_BUT>
+     <RSMPE_BUT>
+      <PFK_CODE>000001</PFK_CODE>
+      <CODE>0001</CODE>
+      <NO>02</NO>
+      <PFNO>05</PFNO>
+     </RSMPE_BUT>
+    </BUT>
+    <PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>02</PFNO>
+      <FUNCODE>TB_OK1</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>05</PFNO>
+      <FUNCODE>TB_OK2</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+    </PFK>
+    <SET>
+     <RSMPE_STAF>
+      <STATUS>ZGITHUB_TEST_GS</STATUS>
+      <FUNCTION>TB_OK1</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>ZGITHUB_TEST_GS</STATUS>
+      <FUNCTION>TB_OK2</FUNCTION>
+     </RSMPE_STAF>
+    </SET>
+    <DOC>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>A</OBJ_TYPE>
+      <OBJ_CODE>000001</OBJ_CODE>
+      <SUB_CODE/>
+      <MODAL>D</MODAL>
+      <NORM/>
+      <INT_NOTE>Gui status</INT_NOTE>
+     </RSMPE_ATRT>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>P</OBJ_TYPE>
+      <OBJ_CODE>000001</OBJ_CODE>
+      <SUB_CODE/>
+      <MODAL>D</MODAL>
+      <NORM/>
+      <INT_NOTE>Gui status</INT_NOTE>
+     </RSMPE_ATRT>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>B</OBJ_TYPE>
+      <OBJ_CODE>000001</OBJ_CODE>
+      <SUB_CODE>0001</SUB_CODE>
+      <MODAL>D</MODAL>
+      <NORM/>
+      <INT_NOTE>Gui status</INT_NOTE>
+     </RSMPE_ATRT>
+    </DOC>
     <TIT/>
     <BIV/>
    </CUA>

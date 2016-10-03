@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TOBJ" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <OBJH>
+    <OBJECTNAME>ZGITHUB_TABL</OBJECTNAME>
+    <OBJECTTYPE>S</OBJECTTYPE>
+    <CLIDEP>X</CLIDEP>
+    <LANGDEP/>
+    <ALEDEP/>
+    <OBJCATEG>APPL</OBJCATEG>
+    <TRCOMPLETE/>
+    <TRDISJUNCT/>
+    <PHASELEVEL>0</PHASELEVEL>
+    <LOCKMETH/>
+    <TADIRCMETH/>
+    <CHECKID/>
+    <OBJNAMELEN>00</OBJNAMELEN>
+    <PROTECT/>
+    <OBJTRANSP/>
+    <LUSER/>
+    <LDATE>0000-00-00</LDATE>
+    <OBJNAMECLS/>
+    <CURSETTING/>
+    <OBJHASADDR/>
+    <IMPORTABLE>3</IMPORTABLE>
+    <OBJCHARSET/>
+    <MCCATEGORY/>
+    <MCDOCUID/>
+   </OBJH>
+   <OBJT>
+    <LANGUAGE>E</LANGUAGE>
+    <OBJECTNAME>ZGITHUB_TABL</OBJECTNAME>
+    <OBJECTTYPE>S</OBJECTTYPE>
+    <DDTEXT>ZGITHUB_TEST table</DDTEXT>
+   </OBJT>
+   <OBJS>
+    <OBJS>
+     <OBJECTNAME>ZGITHUB_TABL</OBJECTNAME>
+     <OBJECTTYPE>S</OBJECTTYPE>
+     <TABNAME>ZGITHUB_TABL</TABNAME>
+     <COVER/>
+     <CANDIDATE/>
+     <DDIC>X</DDIC>
+     <PRIM_TABLE>X</PRIM_TABLE>
+     <VIEWGRANT/>
+     <TAB_FILLED/>
+    </OBJS>
+   </OBJS>
+   <OBJSL/>
+   <OBJM/>
+  </asx:values>
+ </asx:abap>
+</abapGit>

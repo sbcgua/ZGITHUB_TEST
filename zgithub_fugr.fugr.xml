@@ -1,52 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
-   <PROGDIR>
-    <NAME>ZABAPGIT_PERF_TEST</NAME>
-    <STATE>A</STATE>
-    <SQLX/>
-    <EDTX/>
-    <VARCL>X</VARCL>
-    <DBAPL/>
-    <DBNA/>
-    <CLAS/>
-    <TYPE/>
-    <OCCURS/>
-    <SUBC>1</SUBC>
-    <APPL/>
-    <SECU/>
-    <CNAM/>
-    <CDAT>0000-00-00</CDAT>
-    <UNAM/>
-    <UDAT>0000-00-00</UDAT>
-    <VERN/>
-    <LEVL/>
-    <RSTAT/>
-    <RMAND/>
-    <RLOAD>E</RLOAD>
-    <FIXPT>X</FIXPT>
-    <SSET/>
-    <SDATE>0000-00-00</SDATE>
-    <STIME/>
-    <IDATE>0000-00-00</IDATE>
-    <ITIME/>
-    <LDBNAME/>
-    <UCCHECK>X</UCCHECK>
-   </PROGDIR>
+   <AREAT>Test func group</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGITHUB_FUGRTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGITHUB_FUGR</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZGITHUB_FUGR_F1</FUNCNAME>
+     <INCLUDE>LZGITHUB_FUGRU01</INCLUDE>
+     <GLOBAL_FLAG/>
+     <REMOTE_CALL/>
+     <UPDATE_TASK/>
+     <SHORT_TEXT>Function1</SHORT_TEXT>
+     <REMOTE_BASXML/>
+     <IMPORT/>
+     <CHANGING/>
+     <EXPORT/>
+     <TABLES/>
+     <EXCEPTION/>
+     <DOCUMENTATION/>
+    </item>
+   </FUNCTIONS>
    <DYNPROS>
     <item>
      <HEADER>
-      <PROGRAM>ZABAPGIT_PERF_TEST</PROGRAM>
+      <PROGRAM>SAPLZGITHUB_FUGR</PROGRAM>
       <SCREEN>2000</SCREEN>
       <LANGUAGE>E</LANGUAGE>
-      <DESCRIPT>Some screen</DESCRIPT>
+      <DESCRIPT>Some FUGR screen</DESCRIPT>
       <TYPE>M</TYPE>
       <NEXTSCREEN>2000</NEXTSCREEN>
       <CURSOR_POS/>
       <SCREEN_GRP/>
-      <LINES>010</LINES>
-      <COLUMNS>043</COLUMNS>
+      <LINES>027</LINES>
+      <COLUMNS>120</COLUMNS>
       <HOLD_DATA/>
       <FIXED_FONT/>
       <NO_COMPR/>
@@ -90,73 +80,6 @@
       </RPY_DYCATT>
      </CONTAINERS>
      <FIELDS>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEXT</TYPE>
-       <NAME>LAB1</NAME>
-       <TEXT>Hello_world_!</TEXT>
-       <DROPDOWN/>
-       <ICON_NAME/>
-       <ICON_QINFO/>
-       <ICON_QSPEC/>
-       <WITH_ICON/>
-       <ROLLING/>
-       <LINE>003</LINE>
-       <COLUMN>012</COLUMN>
-       <LENGTH>013</LENGTH>
-       <VISLENGTH>013</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP1/>
-       <GROUP2/>
-       <GROUP3/>
-       <GROUP4/>
-       <PUSH_FCODE/>
-       <PUSH_FTYPE/>
-       <CXT_MENON/>
-       <FORMAT>CHAR</FORMAT>
-       <FROM_DICT/>
-       <MODIFIC/>
-       <CONV_EXIT/>
-       <PARAM_ID/>
-       <SET_PARAM/>
-       <GET_PARAM/>
-       <UP_LOWER/>
-       <NO_TEMPL/>
-       <FOREIGNKEY/>
-       <INPUT_FLD/>
-       <OUTPUT_FLD/>
-       <OUTPUTONLY/>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <POSS_ENTRY/>
-       <DROPFROM/>
-       <RIGHT_JUST/>
-       <LEAD_ZEROS/>
-       <_--2A_ENTRY/>
-       <NO_RESET/>
-       <FIXED_FONT/>
-       <BRIGHT/>
-       <INVISIBLE/>
-       <_--32_DIMENS/>
-       <LABELLEFT/>
-       <LABELRIGHT/>
-       <LTR/>
-       <BIDICTRL/>
-       <DBLCLICK/>
-       <MATCHCODE/>
-       <REF_FIELD/>
-       <TC_TITLE/>
-       <TC_HEADING/>
-       <TC_SELCOL/>
-       <BUTT_RIGHT/>
-       <DICT_I_FKY/>
-       <DICT_I_FKD/>
-       <DICT_I_SGN/>
-       <DICT_I_VAL/>
-       <SFW_SWITCHID/>
-       <SFW_SHOWHIDE/>
-       <PROPERTIES/>
-      </RPY_DYFATC>
       <RPY_DYFATC>
        <CONT_TYPE>SCREEN</CONT_TYPE>
        <CONT_NAME>SCREEN</CONT_NAME>
@@ -272,15 +195,6 @@
     <TIT/>
     <BIV/>
    </CUA>
-   <TPOOL>
-    <item>
-     <ID>R</ID>
-     <KEY/>
-     <ENTRY>Performance test for abapGit</ENTRY>
-     <LENGTH>28</LENGTH>
-     <SPLIT/>
-    </item>
-   </TPOOL>
   </asx:values>
  </asx:abap>
 </abapGit>

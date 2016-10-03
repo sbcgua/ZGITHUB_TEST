@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+<abapGit version="v1.0.0">
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>ZGITHUB_TEST_INC1</NAME>
+    <NAME>LZGITHUB_FUGR_TMF00</NAME>
     <STATE>A</STATE>
-    <SQLX/>
+    <SQLX>X</SQLX>
     <EDTX/>
-    <VARCL>X</VARCL>
+    <VARCL/>
     <DBAPL/>
     <DBNA/>
     <CLAS/>
@@ -22,7 +22,7 @@
     <UDAT>0000-00-00</UDAT>
     <VERN/>
     <LEVL/>
-    <RSTAT>T</RSTAT>
+    <RSTAT/>
     <RMAND/>
     <RLOAD>E</RLOAD>
     <FIXPT/>
@@ -32,17 +32,9 @@
     <IDATE>0000-00-00</IDATE>
     <ITIME/>
     <LDBNAME/>
-    <UCCHECK>X</UCCHECK>
+    <UCCHECK/>
    </PROGDIR>
-   <TPOOL>
-    <item>
-     <ID>R</ID>
-     <KEY/>
-     <ENTRY>Include ZGITHUB_TEST_INC1</ENTRY>
-     <LENGTH>25</LENGTH>
-     <SPLIT/>
-    </item>
-   </TPOOL>
+   <TPOOL/>
   </asx:values>
  </asx:abap>
 </abapGit>

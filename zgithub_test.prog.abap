@@ -9,3 +9,4 @@ include ZGITHUB_TEST_INC2.
 
 write / 'Hello world !'.
 write / 'New test line !'.
+write / 'Another one!'.

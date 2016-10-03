@@ -9,7 +9,7 @@ CONSTANTS: gc_xml_version  TYPE string VALUE 'v1.0.0',      "#EC NOTEXT
            gc_abap_version TYPE string VALUE 'v1.17.20'.    "#EC NOTEXT
 
 SELECTION-SCREEN BEGIN OF SCREEN 1001.
-* dummy for triggering screen
+* dummy for triggering  screen
 SELECTION-SCREEN END OF SCREEN 1001.
 
 INCLUDE zabapgit_password_dialog. " !!! Contains SELECTION SCREEN

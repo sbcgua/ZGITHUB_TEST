@@ -17,5 +17,6 @@ CLASS ZGITHUB_TEST_CLASS IMPLEMENTATION.
 
 method TEST.
   write 'hello'.
+  write 'hello2'.
 endmethod.
 ENDCLASS.

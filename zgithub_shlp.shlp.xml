@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SHLP" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD30V>
+    <SHLPNAME>ZGITHUB_SHLP</SHLPNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DDTEXT>Test search help</DDTEXT>
+    <ISSIMPLE>X</ISSIMPLE>
+    <ELEMEXI/>
+    <NOFIELDS/>
+    <ATTACHEXI/>
+    <SELMETHOD>ZGITHUB_TABL</SELMETHOD>
+    <SELMTYPE>T</SELMTYPE>
+    <TEXTTAB/>
+    <SELMEXIT/>
+    <HOTKEY/>
+    <DIALOGTYPE>D</DIALOGTYPE>
+    <ACTFLAG/>
+    <AS4USER/>
+    <AS4DATE>0000-00-00</AS4DATE>
+    <AS4TIME>00:00:00</AS4TIME>
+   </DD30V>
+   <DD31V_TABLE/>
+   <DD32P_TABLE>
+    <DD32P>
+     <SHLPNAME>ZGITHUB_SHLP</SHLPNAME>
+     <FIELDNAME>SGTXT</FIELDNAME>
+     <FLPOSITION>0001</FLPOSITION>
+     <ROLLNAME>SGTXT</ROLLNAME>
+     <SHLPINPUT/>
+     <SHLPOUTPUT>X</SHLPOUTPUT>
+     <SHLPSELPOS>02</SHLPSELPOS>
+     <SHLPSELDIS/>
+     <SHLPLISPOS>02</SHLPLISPOS>
+     <SHLPUPPER/>
+     <DEFAULTVAL/>
+     <DEFAULTTYP/>
+     <SQLTAB/>
+     <ROLLCHANGE/>
+     <INDEXNAME/>
+     <DOMNAME>TEXT50</DOMNAME>
+     <HEADLEN>50</HEADLEN>
+     <SCRLEN1>10</SCRLEN1>
+     <SCRLEN2>15</SCRLEN2>
+     <SCRLEN3>20</SCRLEN3>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000050</LENG>
+     <OUTPUTLEN>000050</OUTPUTLEN>
+     <DECIMALS>000000</DECIMALS>
+     <LOWERCASE>X</LOWERCASE>
+     <SIGNFLAG/>
+     <CONVEXIT/>
+     <PROXYTYPE/>
+    </DD32P>
+   </DD32P_TABLE>
+   <DD33V_TABLE/>
+  </asx:values>
+ </asx:abap>
+</abapGit>
