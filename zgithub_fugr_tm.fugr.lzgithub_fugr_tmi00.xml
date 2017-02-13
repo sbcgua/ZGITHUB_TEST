@@ -6,33 +6,8 @@
     <NAME>LZGITHUB_FUGR_TMI00</NAME>
     <STATE>A</STATE>
     <SQLX>X</SQLX>
-    <EDTX/>
-    <VARCL/>
-    <DBAPL/>
-    <DBNA/>
-    <CLAS/>
-    <TYPE/>
-    <OCCURS/>
     <SUBC>I</SUBC>
-    <APPL/>
-    <SECU/>
-    <CNAM/>
-    <CDAT>0000-00-00</CDAT>
-    <UNAM/>
-    <UDAT>0000-00-00</UDAT>
-    <VERN/>
-    <LEVL/>
-    <RSTAT/>
-    <RMAND/>
     <RLOAD>E</RLOAD>
-    <FIXPT/>
-    <SSET/>
-    <SDATE>0000-00-00</SDATE>
-    <STIME/>
-    <IDATE>0000-00-00</IDATE>
-    <ITIME/>
-    <LDBNAME/>
-    <UCCHECK/>
    </PROGDIR>
    <TPOOL/>
   </asx:values>

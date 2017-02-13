@@ -11,17 +11,7 @@
     <item>
      <FUNCNAME>ZGITHUB_FUGR_F1</FUNCNAME>
      <INCLUDE>LZGITHUB_FUGRU01</INCLUDE>
-     <GLOBAL_FLAG/>
-     <REMOTE_CALL/>
-     <UPDATE_TASK/>
      <SHORT_TEXT>Function1</SHORT_TEXT>
-     <REMOTE_BASXML/>
-     <IMPORT/>
-     <CHANGING/>
-     <EXPORT/>
-     <TABLES/>
-     <EXCEPTION/>
-     <DOCUMENTATION/>
     </item>
    </FUNCTIONS>
    <DYNPROS>
@@ -33,50 +23,14 @@
       <DESCRIPT>Some FUGR screen</DESCRIPT>
       <TYPE>M</TYPE>
       <NEXTSCREEN>2000</NEXTSCREEN>
-      <CURSOR_POS/>
-      <SCREEN_GRP/>
       <LINES>027</LINES>
       <COLUMNS>120</COLUMNS>
-      <HOLD_DATA/>
-      <FIXED_FONT/>
-      <NO_COMPR/>
-      <NO_EXECUTE/>
-      <KEEP_SCPOS/>
       <NO_TOOLBAR>X</NO_TOOLBAR>
-      <CTX_MENON/>
      </HEADER>
      <CONTAINERS>
       <RPY_DYCATT>
        <TYPE>SCREEN</TYPE>
        <NAME>SCREEN</NAME>
-       <ELEMENT_OF/>
-       <LINE>000</LINE>
-       <COLUMN>000</COLUMN>
-       <LENGTH>000</LENGTH>
-       <HEIGHT>000</HEIGHT>
-       <LOOP_TYPE/>
-       <LOOP_BLOCK>000</LOOP_BLOCK>
-       <LOOP_DISP>000</LOOP_DISP>
-       <C_RESIZE_V/>
-       <C_RESIZE_H/>
-       <C_LINE_MIN>000</C_LINE_MIN>
-       <C_COLN_MIN>000</C_COLN_MIN>
-       <C_SCROLL_V/>
-       <C_SCROLL_H/>
-       <TC_TABTYPE/>
-       <TC_SEPAR_V/>
-       <TC_SEPAR_H/>
-       <TC_TITLE/>
-       <TC_HEADER/>
-       <TC_CONFIG/>
-       <TC_SEL_LNS/>
-       <TC_SEL_CLS/>
-       <TC_LSEL_CL/>
-       <TC_FIXCOL>000</TC_FIXCOL>
-       <CU_CC_NAME/>
-       <SFW_SWITCHID/>
-       <SFW_SHOWHIDE/>
-       <PROPERTIES/>
       </RPY_DYCATT>
      </CONTAINERS>
      <FIELDS>
@@ -84,68 +38,12 @@
        <CONT_TYPE>SCREEN</CONT_TYPE>
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>OKCODE</TYPE>
-       <NAME/>
        <TEXT>____________________</TEXT>
-       <DROPDOWN/>
-       <ICON_NAME/>
-       <ICON_QINFO/>
-       <ICON_QSPEC/>
-       <WITH_ICON/>
-       <ROLLING/>
-       <LINE>000</LINE>
-       <COLUMN>000</COLUMN>
        <LENGTH>020</LENGTH>
        <VISLENGTH>020</VISLENGTH>
        <HEIGHT>001</HEIGHT>
-       <GROUP1/>
-       <GROUP2/>
-       <GROUP3/>
-       <GROUP4/>
-       <PUSH_FCODE/>
-       <PUSH_FTYPE/>
-       <CXT_MENON/>
        <FORMAT>CHAR</FORMAT>
-       <FROM_DICT/>
-       <MODIFIC/>
-       <CONV_EXIT/>
-       <PARAM_ID/>
-       <SET_PARAM/>
-       <GET_PARAM/>
-       <UP_LOWER/>
-       <NO_TEMPL/>
-       <FOREIGNKEY/>
        <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD/>
-       <OUTPUTONLY/>
-       <REQU_ENTRY/>
-       <POSS_ENTRY/>
-       <DROPFROM/>
-       <RIGHT_JUST/>
-       <LEAD_ZEROS/>
-       <_--2A_ENTRY/>
-       <NO_RESET/>
-       <FIXED_FONT/>
-       <BRIGHT/>
-       <INVISIBLE/>
-       <_--32_DIMENS/>
-       <LABELLEFT/>
-       <LABELRIGHT/>
-       <LTR/>
-       <BIDICTRL/>
-       <DBLCLICK/>
-       <MATCHCODE/>
-       <REF_FIELD/>
-       <TC_TITLE/>
-       <TC_HEADING/>
-       <TC_SELCOL/>
-       <BUTT_RIGHT/>
-       <DICT_I_FKY/>
-       <DICT_I_FKD/>
-       <DICT_I_SGN/>
-       <DICT_I_VAL/>
-       <SFW_SWITCHID/>
-       <SFW_SHOWHIDE/>
-       <PROPERTIES/>
       </RPY_DYFATC>
      </FIELDS>
      <FLOW_LOGIC>
@@ -174,27 +72,7 @@
      </SPACES>
     </item>
    </DYNPROS>
-   <CUA>
-    <ADM>
-     <ACTCODE/>
-     <MENCODE/>
-     <PFKCODE/>
-     <DEFAULTACT/>
-     <DEFAULTPFK/>
-     <MOD_LANGU/>
-    </ADM>
-    <STA/>
-    <FUN/>
-    <MEN/>
-    <MTX/>
-    <ACT/>
-    <BUT/>
-    <PFK/>
-    <SET/>
-    <DOC/>
-    <TIT/>
-    <BIV/>
-   </CUA>
+   <CUA/>
   </asx:values>
  </asx:abap>
 </abapGit>
