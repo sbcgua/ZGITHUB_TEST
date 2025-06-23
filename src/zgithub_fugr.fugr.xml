@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Test func group</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGITHUB_FUGRTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGITHUB_FUGR</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZGITHUB_FUGR_F1</FUNCNAME>
+     <SHORT_TEXT>Function1</SHORT_TEXT>
+    </item>
+   </FUNCTIONS>
+   <DYNPROS>
+    <item>
+     <HEADER>
+      <PROGRAM>SAPLZGITHUB_FUGR</PROGRAM>
+      <SCREEN>2000</SCREEN>
+      <LANGUAGE>E</LANGUAGE>
+      <DESCRIPT>Some FUGR screen</DESCRIPT>
+      <TYPE>M</TYPE>
+      <NEXTSCREEN>2000</NEXTSCREEN>
+      <LINES>027</LINES>
+      <COLUMNS>120</COLUMNS>
+      <NO_TOOLBAR>X</NO_TOOLBAR>
+     </HEADER>
+     <CONTAINERS>
+      <RPY_DYCATT>
+       <TYPE>SCREEN</TYPE>
+       <NAME>SCREEN</NAME>
+      </RPY_DYCATT>
+     </CONTAINERS>
+     <FIELDS>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>OKCODE</TYPE>
+       <TEXT>____________________</TEXT>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+      </RPY_DYFATC>
+     </FIELDS>
+    </item>
+   </DYNPROS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
